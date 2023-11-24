@@ -25,10 +25,10 @@ public_ip = "http://44.211.171.94/"
 
 Running Website:
 
-![Alt text](image.png)
+![Alt text](images\website.png)
 
 Console:
-![Alt text](image-1.png)
+![Alt text](images\console.png)
 
 Terraform Destroy Output:
 ```
