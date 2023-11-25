@@ -1,12 +1,12 @@
-# Web Tier using AWS EC2 Linux (without  multi-az/auto scaling)
+# Web Tier using AWS EC2 Linux (single-az/single EC2/no auto scaling)
 
 Deploying a Linux Server EC2 Instance in AWS using Terraform
 
-We have created 2 terraform modules.
+![Alt text](/images/diagram.png)
 
-1. vpc - to create vpc, public subnet, internet gateway, security groups and route tables
-2. web - to create Linux Web EC2 instance with userdata script to display instance metadata using latest Amazon Linux ami.
-3. main - These modules get called in main config.
+1. vpc module - to create vpc, public subnet, internet gateway, security groups and route tables
+2. web module - to create Linux Web EC2 instance with userdata script to display instance metadata using latest Amazon Linux ami.
+3. main module - Above modules get called in main config.
 
 Terraform Plan Output:
 ```
@@ -19,8 +19,8 @@ Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-instance_id = "i-0af8e5b2d89a1e410"
-public_ip = "http://44.211.171.94/"
+instance_id = "i-0d32ce14df3987030"
+public_ip = "http://54.165.140.50/"
 ```
 
 Running Website:
